@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Freemason Demo</title>
+  <!-- Link up the CSS (I recommend concatenating this with your own stylesheet to save on http requests) -->
+  <link rel="stylesheet" type="text/css" href="freemason.css">
+</head>
+
+<body>
+  <!-- -->
+  <div class="wrapper" style="top: 20px;">
+    <div class="thumb" style="background:pink;"></div>
+    <div class="thumb" style="background:gray;"></div>
+    <div class="thumb" style="background:red;"></div>
+    <div class="thumb" style="background:blue;"></div>
+    <div class="thumb" style="background:purple;"></div>
+    <div class="thumb" style="background:yellow;"></div>
+    <div class="thumb" style="background:green;"></div>
+    <div class="thumb" style="background:black;"></div>
+  </div>
+
+<!-- Link up jQuery -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+
+<!-- Link up FreeMason JS (minified, please) -->
+<script src="freemason.min.js" type="text/javascript"></script>
+
+<!-- Instantiate FreeMason on your wrapper class (available options shown) -->
+<script type="text/javascript">
+  $('.wrapper').freeMason({
+    speed: '0.5s', // Animation speed
+    maxCols: 4, // Maximum # of columns
+    padding: 40 // Horizontal padding added to container
+  });
+</script>
+
+</body>
+</html>

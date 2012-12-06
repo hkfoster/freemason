@@ -1,0 +1,12 @@
+body { margin: 0; }
+
+.wrapper {
+  position: relative;
+  margin: 0 auto;
+}
+
+.thumb {
+  position: absolute;
+  width: 220px; 
+  height: 165px;
+}
