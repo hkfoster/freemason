@@ -2,7 +2,7 @@
  * FreeMason v1.0.1
  * A dynamic layout plugin (inspired by jQuery Masonry)
  * Animate all the things!
- * http://freemason.kylefoster.me
+ * https://github.com/hkfoster/freemason/
  * 
  * Licensed under the MIT license.
  * Copyright 2012 Kyle Foster
