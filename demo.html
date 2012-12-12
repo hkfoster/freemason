@@ -9,17 +9,32 @@
 </head>
 
 <body>
-  <!-- Add a container class of 'wrapper' and and item class of 'thumb' -->
-  <div class="wrapper" style="top: 20px;">
-    <div class="thumb" style="background:pink;"></div>
-    <div class="thumb" style="background:gray;"></div>
-    <div class="thumb" style="background:red;"></div>
-    <div class="thumb" style="background:blue;"></div>
-    <div class="thumb" style="background:purple;"></div>
-    <div class="thumb" style="background:yellow;"></div>
-    <div class="thumb" style="background:green;"></div>
-    <div class="thumb" style="background:black;"></div>
-  </div>
+  <!-- Add a container class of 'wrapper', a list class of 'thumb-list', and an item class of 'thumb' -->
+  <section class="wrapper">
+    <header>
+      <h1>FreeMason</h1>
+      <h3>A lightweight jQuery layout plugin</h3>
+    </header>
+
+    <ul class="thumb-list">
+      <li class="thumb" style="background: red"></li>
+      <li class="thumb" style="background: blue"></li>
+      <li class="thumb" style="background: green"></li>
+      <li class="thumb" style="background: gray"></li>
+      <li class="thumb" style="background: pink"></li>
+      <li class="thumb" style="background: purple"></li>
+      <li class="thumb" style="background: black"></li>
+      <li class="thumb" style="background: violet"></li>
+      <li class="thumb" style="background: turquoise"></li>
+      <li class="thumb" style="background: tomato"></li>
+      <li class="thumb" style="background: sienna"></li>
+      <li class="thumb" style="background: yellowGreen"></li>
+      <li class="thumb" style="background: skyBlue"></li>
+      <li class="thumb" style="background: navy"></li>
+      <li class="thumb" style="background: fireBrick"></li>
+      <li class="thumb" style="background: gold"></li>
+    </ul>
+  </section>
 
 <!-- Link up jQuery -->
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
@@ -30,9 +45,10 @@
 <!-- Instantiate FreeMason on your wrapper class (available options shown) -->
 <script type="text/javascript">
   $('.wrapper').freeMason({
-    speed: '0.5s', // Animation speed
-    maxCols: 4, // Maximum # of columns
-    padding: 40 // Horizontal padding added to container
+    contPadding : 20, // Horizontal padding on container
+    thumbGutter : 20, // Padding on thumbnails
+    speed : '0.5s',   // Animation speed
+    maxCols : 4       // Maximum # of columns
   });
 </script>
 
