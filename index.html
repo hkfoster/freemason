@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Freemason : A lightweight jQuery layout plugin</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <header>
+    <h1 class="logo">Freemason.js</h1>
+    <a class="github" href="https://github.com/hkfoster/freemason" target="_blank">Fork me on Github</a>
+    <span class="teaser">Resize me &rarr;</span>
+  </header>
+
+  <!-- Add container class of 'thumb-wrapper' -->
+  <section class="thumb-wrapper">
+
+  <!-- Add a list class of 'thumb-list' and an item class of 'thumb' -->
+   <ul class="thumb-list">
+      <li class="thumb"><img src="img/01.jpg" alt="Thumb 01"></li>    
+      <li class="thumb"><img src="img/02.jpg" alt="Thumb 02"></li>    
+      <li class="thumb"><img src="img/03.jpg" alt="Thumb 03"></li>    
+      <li class="thumb"><img src="img/04.jpg" alt="Thumb 04"></li>    
+      <li class="thumb"><img src="img/05.jpg" alt="Thumb 05"></li>
+      <li class="thumb"><img src="img/06.jpg" alt="Thumb 06"></li>
+      <li class="thumb"><img src="img/07.jpg" alt="Thumb 07"></li>
+      <li class="thumb"><img src="img/08.jpg" alt="Thumb 08"></li>
+      <li class="thumb"><img src="img/09.jpg" alt="Thumb 09"></li>
+      <li class="thumb"><img src="img/10.jpg" alt="Thumb 10"></li>
+      <li class="thumb"><img src="img/11.jpg" alt="Thumb 11"></li>
+      <li class="thumb"><img src="img/12.jpg" alt="Thumb 12"></li>
+    </ul>
+
+  </section>
+    
+  <footer class="colophon">
+    <p>Copyleft &copy; <script>document.write(new Date().getFullYear())</script> Kyle Foster. All wrongs reversed.</p>
+  </footer>
+
+  <!-- Include jQuery -->
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
+
+  <!-- Include Freemason (minified please) -->
+  <script src="js/freemason.min.js"></script>
+
+  <!-- Instantiate Freemason -->
+  <script>
+    $(window).load(function() {
+
+      $('.thumb-wrapper').freeMason({
+        contPadding : 20, // Horizontal padding on container
+        thumbGutter : 20, // Padding on thumbnails
+        speed : '0.5s',   // Animation speed
+        maxCols : 4       // Maximum # of columns
+      });
+
+      $('body').fadeTo(500,1); // Just a nice transition effect
+
+      $(window).resize(function() {
+        $('.teaser').fadeTo(500, 0); // Removing our teaser on resize
+      });
+
+    });
+  </script>
+  
+</body>
+</html>
