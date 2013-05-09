@@ -1,5 +1,5 @@
 /**
- * Freemason v1.0.2
+ * Freemason v1.1.0
  * @author Kyle Foster
  * MIT license
  */
@@ -30,10 +30,11 @@
             thumbGutter = options.thumbGutter,     // Padding on thumbnails
             totalWidth  = thumbWidth + thumbGutter,
             widthCheck  = Math.floor((windowWidth - contPadding) / totalWidth),
-            prefix      = ($.browser.webkit)  ? '-webkit-transition' :
-                          ($.browser.mozilla) ? '-moz-transition' : 
-                          ($.browser.msie)    ? '-ms-transition' :
-                          ($.browser.opera)   ? '-o-transition' : 'transition';
+            prefix      = (/mozilla/.test(navigator.userAgent.toLowerCase()) && 
+                          !/webkit/.test(navigator.userAgent.toLowerCase())) ? '-moz-transition' : 
+                          (/webkit/.test(navigator.userAgent.toLowerCase())) ? '-webkit-transition' :
+                          (/msie/.test(navigator.userAgent.toLowerCase()))   ? '-ms-transition' :
+                          (/opera/.test(navigator.userAgent.toLowerCase()))  ? '-o-transition' : 'transition';
 
         // Set container width parameters
         elem.css({ 
